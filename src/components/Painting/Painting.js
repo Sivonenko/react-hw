@@ -1,14 +1,15 @@
-import propTypes from 'prop-types'
+import propTypes from 'prop-types';
+import s from './Painting.module.css';
 const Painting = ({
   imageUrl,
   title,
-  author = "no name",
+  author = 'no name',
   profileUrl,
   price,
   quantity,
 }) => {
   return (
-    <div>
+    <div className={s.container}>
       <img src={imageUrl} alt={title} width="480" />
       <h2>{title}</h2>
       <p>
@@ -28,5 +29,5 @@ Painting.propTypes = {
   author: propTypes.string.isRequired,
   price: propTypes.number.isRequired,
   quantity: propTypes.number.isRequired,
-  }
+};
 export default Painting;
